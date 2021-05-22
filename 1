@@ -1,0 +1,23 @@
+number_threes = int(1000/3)
+number_fives = int(1000/5)
+fives = []
+threes = []
+multiple = 1
+
+while number_threes > 0:
+  threes.append(multiple*3)
+  multiple = multiple+1
+  number_threes = number_threes-1
+
+multiple = 1
+
+while number_fives>0:
+  fives.append(multiple*5)
+  multiple = multiple+1
+  number_fives = number_fives-1
+for i in fives:
+  if (fives[list_5]/3).is_integer():
+    fives[list_5]=0
+  list_5 = list_5+1
+
+print(sum(threes)+sum(fives))
