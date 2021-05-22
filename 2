@@ -1,0 +1,12 @@
+fib [1,2]
+n=1
+while fib[n] < 4000000:
+  fib.append(fib[n-1]+fib[n])
+  n=n+1
+fib.pop()
+n=0
+for i in fib:
+  if (fib[n]/2)-int(fib[n]/2) != 0:
+    fib[n] = 0
+  n=n+1
+print(sum(fib))
