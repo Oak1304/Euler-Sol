@@ -1,5 +1,5 @@
-factor1 = 1
-factor2 = 1
+factor1 = 101
+factor2 = 101
 back_n = ""
 intback_n = 0
 palindrome = 0
@@ -7,6 +7,7 @@ def switcheroo(x):
     y = str(x)
     z = len(y)
     global back_n
+    global intback_n
     while z > 0:
         back_n = back_n + y[z-1]
         z = z-1
@@ -14,12 +15,12 @@ def switcheroo(x):
     back_n = ""
 
 
-while factor1 < 100:
+while factor1 < 1000:
     factor2 = 1
-    while factor2 < 100:
+    while factor2 < 1000:
         number = factor1*factor2
         switcheroo(number)
-        if number == intback_n:
+        if number == intback_n and number > palindrome:
             palindrome = number
         factor2 = factor2+1
     factor1 = factor1+1
