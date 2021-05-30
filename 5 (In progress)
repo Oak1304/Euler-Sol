@@ -1,0 +1,27 @@
+number = 0
+numbers = []
+for x in range(2,10):
+    number = x
+    prime = True
+    power = False
+    for i in range (2,10):
+        if (x%i==0 and x!=i):
+            prime = False
+            for n in range(1,4):
+                if x == i**n:
+                    power = True
+                    if i in numbers:
+                        numbers.extend([i]*(n-1))
+                    else:
+                        numbers.extend([i]*n)
+            if power == False:
+                if i in numbers:
+                
+                numbers.append(i)
+    if prime == True:
+        numbers.append(x)
+            
+    
+            
+    
+print(numbers)
